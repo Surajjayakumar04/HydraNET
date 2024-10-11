@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HYDRANET</title>
+    <link rel="stylesheet" href="styles03.css">
+</head>
+<body>
+
+<!-- Header Section -->
+<header>
+    <div class="container">
+        <div class="logo">
+            <a href="#home">
+                <img src="/Users/surajj/Desktop/HydraNET/HYDRANET-removebg-preview.png" alt="HYDRANET Logo" class="logo-img">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#abstract">Abstract</a></li>
+                <li><a href="#goals">Project Goals</a></li>
+                <li><a href="#data-sources">Data Sources</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#faqs">FAQs</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+    <!-- Hero / Landing Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h2>Mapping Water Infrastructure Around Differnt Cities</h2>
+            <p>Explore the contemporary water data of Bangalore. Discover water availability and shortages in various areas over time.</p>
+            <a href="#map" class="cta-btn">Explore Map</a>
+            <h2></h2>
+        
+        </div>
+    </section>
+
+    <section id="interactive-water-map" class="section-heading">
+        <div class="container">
+            <h2>Interactive Water Map</h2>
+        </div>
+    </section>
+
+<!-- City Filter Section -->
+<div id="city-filter" class="city-filter">
+    <label for="citySelect">Filter by City:</label>
+    <select id="citySelect">
+        <option value="bengaluru">Bengaluru</option>
+        <option value="chennai">Chennai</option>
+    </select>
+</div>
+
+
+
+    <!-- Interactive Map Section -->
+    <section id="map" class="map-section">
+        <div class="container">
+            <div id="map">
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+                    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+                    <link rel="stylesheet" href="Maps.css"/>
+                  </head>
+                  <body>
+                    
+                    <div id="map" style="height: 720px;"></div>
+                  
+                    <!-- Leaflet.js -->
+                    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+                    <!-- Water Data and Map Script -->
+                    <script src="water_data.js"></script>
+                    <script src="map_script.js"></script>
+                  
+                    <!-- Call the map initialization after the DOM is loaded -->
+                    <script>
+                      document.addEventListener("DOMContentLoaded", function() {
+                        initMap();  // Ensure map initializes after the page fully loads
+                      });
+                    </script>
+                  </body>
+            </div>
+        </div>
+    </section>
+
+    <div id="controls">
+        <button id="filter-green">Show Areas with Good Water Levels (Green)</button>
+        <button id="filter-yellow">Show Areas with Mid-Level Water (Yellow)</button>
+        <button id="filter-red">Show Areas with Low Water Levels (Red)</button>
+        <button id="filter-all">Show All Areas</button>
+    </div>
+    
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About the Project</h2>
+            <p>HYDRANET: Bangalore is an initiative that offers a comprehensive look into the city’s water infrastructure, drawing from historical data preserved in the Bangalore Water Supply and Sewerage Board (BWSSB) archives. By providing an accurate and detailed digital map of water sources and distribution systems, the project aims to assist urban planners, researchers, and policymakers in understanding and managing Bangalore’s water resources more effectively.</p>
+            <p>This tool is designed to foster informed decisions around sustainable water management, infrastructure planning, and long-term conservation strategies, addressing the challenges posed by rapid urban growth and climate change.</p>
+        </div>
+    </section>
+
+    <!-- Abstract Section -->
+    <section id="abstract" class="abstract">
+        <div class="container">
+            <h2>Abstract</h2>
+            <p>This project aims to create a detailed digital map of Bangalore’s water infrastructure, using both historical and current data from the Bangalore Water Supply and Sewerage Board (BWSSB). As Bangalore continues to grow rapidly, it faces increasing challenges in managing its water resources, driven by population growth, urbanization, and industrial development.</p>
+            <p>The project will gather detailed information on key water sources—such as lakes, rivers, reservoirs, and groundwater wells—and map the city’s water channels, including pipelines, distribution networks, and sewage systems. By combining this data with modern Geographic Information Systems (GIS) technology, we aim to create a visual representation that shows how the city’s water supply and distribution have evolved over time.</p>
+            <p>This map will help urban planners, policymakers, and researchers better understand Bangalore’s water infrastructure. It will identify critical water sources, highlight areas experiencing shortages, and reveal trends in water usage. By doing so, it will enable more informed decisions for sustainable water management and future infrastructure development.</p>
+            <p>Ultimately, this tool will provide valuable insights into the impact of urbanization and climate change on Bangalore’s water systems. It’s designed not only to address current water management challenges but also to help secure the city’s water future, ensuring a sustainable approach to growth and resource conservation. Through this project, we hope to contribute to more effective, data-driven strategies for managing water in Bangalore and potentially offer solutions that could be adapted in other cities facing similar challenges.</p>
+        </div>
+    </section>
+
+    <!-- Project Goals Section -->
+<section id="goals" class="goals">
+    <div class="container">
+        <h2>Project Goals</h2>
+        <ul class="goals-list">
+            <li>To create a comprehensive digital map of Bangalore's water infrastructure.</li>
+            <li>To identify critical water sources and infrastructure across the city.</li>
+            <li>To analyze historical and contemporary water usage patterns.</li>
+            <li>To support urban planning and policy-making for sustainable water management.</li>
+            <li>To assess the impact of urbanization and climate change on Bangalore’s water systems.</li>
+        </ul>
+    </div>
+</section>
+
+<!-- Data Sources Section -->
+<section id="data-sources" class="data-sources">
+    <div class="container">
+        <h2>Data Sources</h2>
+        <p>The project utilizes various data sources to create an accurate and comprehensive map of Bangalore's water infrastructure:</p>
+        <ul class="data-sources-list">
+            <li>Bangalore Water Supply and Sewerage Board (BWSSB) archives</li>
+            <li>Geographic Information Systems (GIS) data</li>
+            <li>Remote sensing data for water bodies and distribution networks</li>
+            <li>Historical documents and reports on water usage</li>
+            <li>Surveys and studies on urban water management</li>
+        </ul>
+    </div>
+</section>
+
+
+    <!-- Team Section -->
+    <section class="meet-the-team">
+        <h2>Meet the Team</h2>
+        <div class="team-members">
+            <div class="team-member">
+                <img src="/Users/surajj/Desktop/HydraNET/SURAJ.JPG" alt="Team Member 1">
+                <h3>Suraj J</h3>
+                <p>Frontend Developer</p>
+            </div>
+            <div class="team-member">
+                <img src="/Users/surajj/Desktop/HydraNET/IMG_0825.JPG" alt="Team Member 2">
+                <h3>Chindu Reddy R</h3>
+                <p>ML Developer </p>
+            </div>
+            <div class="team-member">
+                <img src="/Users/surajj/Desktop/HydraNET/974A192A-471E-43BC-B493-CB9AD59305E1.jpeg" alt="Team Member 3">
+                <h3>Affaf Ahmed</h3>
+                <p>Backend Developer</p>
+            </div>
+            <div class="team-member">
+                <img src="/Users/surajj/Desktop/HydraNET/PHOTO-2024-10-06-14-20-55.jpg" alt="Team Member 4">
+                <h3>Harshini B S</h3>
+                <p>Backend Developer</p>
+            </div>
+            <div class="team-member">
+                <img src="/Users/surajj/Desktop/HydraNET/PHOTO-2024-10-06-14-17-43.jpg" alt="Team Member 5">
+                <h3>Dev Agarawal</h3>
+                <p>Data analyst</p>
+            </div>
+        </div>
+    </section>
+
+ <!-- FAQs Section -->
+<section id="faqs" class="faqs">
+    <div class="container">
+        <h2 class="faq-heading">Frequently Asked Questions (FAQs)</h2>
+
+        <div class="faq-item">
+            <h3 class="faq-question">What is HYDRANET: Bangalore?</h3>
+            <div class="faq-answer" style="display: none;">
+                <p>HYDRANET: Bangalore is a project aimed at mapping the city's water infrastructure to improve water management and sustainability.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <h3 class="faq-question">How will the project benefit Bangalore?</h3>
+            <div class="faq-answer" style="display: none;">
+                <p>The project will provide insights into water usage patterns, identify shortages, and support urban planners and policymakers in making informed decisions.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <h3 class="faq-question">What data is being used for this project?</h3>
+            <div class="faq-answer" style="display: none;">
+                <p>The project uses historical and contemporary data from BWSSB archives, GIS data, remote sensing information, and various studies on urban water management.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <h3 class="faq-question">How can the public access the HYDRANET platform?</h3>
+            <div class="faq-answer" style="display: none;">
+                <p>The HYDRANET platform will be available online, allowing the public to interact with the map and access information regarding water resources and infrastructure.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <h3 class="faq-question">What types of analyses will be conducted using the data?</h3>
+            <div class="faq-answer" style="display: none;">
+                <p>Analyses will include water usage trends, identification of high-demand areas, assessment of infrastructure efficiency, and evaluations of sustainability practices.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <h3 class="faq-question">How will HYDRANET contribute to water conservation?</h3>
+            <div class="faq-answer" style="display: none;">
+                <p>HYDRANET aims to educate the public about water conservation, facilitate better resource management, and provide insights to promote responsible usage.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <h3 class="faq-question">What challenges is the project likely to face?</h3>
+            <div class="faq-answer" style="display: none;">
+                <p>Challenges may include data accuracy, community engagement, and the integration of diverse data sources for a comprehensive analysis.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <h3 class="faq-question">How can I get involved in the HYDRANET project?</h3>
+            <div class="faq-answer" style="display: none;">
+                <p>You can get involved by volunteering for community initiatives, providing feedback on the platform, or participating in workshops and events related to the project.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <h3 class="faq-question">What are the future plans for HYDRANET?</h3>
+            <div class="faq-answer" style="display: none;">
+                <p>Future plans include expanding data collection, enhancing the platform's features, and collaborating with local communities for sustainable water management practices.</p>
+            </div>
+        </div>
+
+        <!-- Date Filter Section (hidden by default) -->
+        <div id="date-filter" class="date-filter" style="display:none;">
+            <label for="dateSelect">Select Date:</label>
+            <input type="date" id="dateSelect" min="2020-01-01" max="2024-12-31">
+        </div>
+    </div>
+</section>
+
+<script>
+    // Get all FAQ questions
+    const questions = document.querySelectorAll('.faq-question');
+
+    questions.forEach(question => {
+        question.addEventListener('click', () => {
+            // Toggle active class
+            question.parentElement.classList.toggle('active');
+            
+            // Get the corresponding answer
+            const answer = question.nextElementSibling;
+
+            // Toggle the display of the answer
+            if (answer.style.display === "block") {
+                answer.style.display = "none";
+            } else {
+                answer.style.display = "block";
+            }
+        });
+    });
+
+    // Add event listener for city dropdown change
+document.getElementById('citySelect').addEventListener('change', function() {
+    const selectedCity = this.value;
+
+    // Coordinates for Bangalore and Chennai
+    const cities = {
+        'bengaluru': [12.9716, 77.5946],  // Bengaluru coordinates
+        'chennai': [13.0827, 80.2707]     // Chennai coordinates
+    };
+
+    // Change map view based on the selected city
+    if (cities[selectedCity]) {
+        map.setView(cities[selectedCity], 12);  // Adjust zoom level as needed
+    }
+});
+// Initialize the map and event listeners on page load
+document.addEventListener("DOMContentLoaded", function() {
+    map = L.map('map').setView([12.9716, 77.5946], 12);  // Default to Bengaluru
+
+    // Add OpenStreetMap tile layer
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    // Add event listener for city dropdown change
+    document.getElementById('citySelect').addEventListener('change', function() {
+        const selectedCity = this.value;
+
+        // Coordinates for Bangalore and Chennai
+        const cities = {
+            'bengaluru': [12.9716, 77.5946],  // Bengaluru coordinates
+            'chennai': [13.0827, 80.2707]     // Chennai coordinates
+        };
+
+        // Change map view based on the selected city
+        if (cities[selectedCity]) {
+            map.setView(cities[selectedCity], 12);  // Adjust zoom level as needed
+
+            // Show or hide the date filter based on selected city
+            if (selectedCity === 'chennai') {
+                document.getElementById('date-filter').style.display = 'block'; // Show the date picker for Chennai
+            } else {
+                document.getElementById('date-filter').style.display = 'none';  // Hide the date picker for other cities
+            }
+        }
+    });
+
+    // Add event listener for the date picker
+    document.getElementById('dateSelect').addEventListener('change', function() {
+        const selectedDate = this.value;  // Get the selected date (YYYY-MM-DD format)
+        console.log(`Selected date: ${selectedDate}`);
+
+        // Load data based on selected date here
+        // You can fetch predicted or historical data based on the chosen date
+    });
+});
+
+</script>
+    
+<!-- Contact Section -->
+<section id="contact" class="contact">
+    <div class="container">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or would like to collaborate on this project, feel free to reach out using the form below. We look forward to hearing from you!</p>
+
+        <div class="contact-grid">
+            <!-- Contact Form -->
+            <div class="contact-form">
+                <form action="submit_form.php" method="post">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Send Message</button>
+                </form>
+            </div>
+
+            <!-- Contact Details -->
+            <div class="contact-details">
+                <h3>Reach Us Directly</h3>
+                <p>Email: <a href="mailto:info@hydranetbangalore.com">info@hydranetbangalore.com</a></p>
+                <p>Phone: +91-0000000000</p>
+                <p>Follow Us On:</p>
+                <div class="social-media-icons">
+                    <a href="#" class="social-icon"><img src="/Users/surajj/Desktop/Instagram.png" alt="Instagram"></a>
+                    <a href="#" class="social-icon"><img src="/Users/surajj/Desktop/Twitter.png" alt="Twitter"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>2024 HYDRANET: Bangalore.</p>
+
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+#map {
+    height: 700px;
+    width: 100%;
+}
+#controls {
+    margin: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-style:italic;
+    font-weight: bolder;
+    justify-content: center;
+    text-align: center;
+}
+.text-header{
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Style for the date display span */
+#dateDisplay {
+    color: #000000; /* Change text color to blue */
+}
+
+/* Date picker styling */
+input[type="date"] {
+    padding: 5px; /* Padding around the input */
+    border: 1px solid #00fbff; /* Green border */
+    border-radius: 8px; /* Rounded corners */
+    font-size: 17px; /* Font size */
+}

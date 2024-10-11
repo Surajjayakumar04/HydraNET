@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bangalore Water Levels Map</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+  <link rel="stylesheet" href="styles.css"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+</head>
+<body>
+  <h2 class="heading">Interactive Map of Water Levels in Bangalore</h2>
+  <div id="controls">
+    <button id="filter-green">Show Areas with Good Water Levels (Green)</button>
+    <button id="filter-yellow">Show Areas with Mid-Level Water (Yellow)</button>
+    <button id="filter-red">Show Areas with Low Water Levels (Red)</button>
+    <button id="filter-all">Show All Areas</button>
+  </div>
+
+  <div id="map" style="height: 720px;"></div>
+
+  <!-- Leaflet.js -->
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  <!-- Water Data and Map Script -->
+  <script src="water_data.js"></script>
+  <script src="map_script.js"></script>
+
+  <!-- Call the map initialization after the DOM is loaded -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      initMap();  // Ensure map initializes after the page fully loads
+    });
+  </script>
+</body>
+</html>

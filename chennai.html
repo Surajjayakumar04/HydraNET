@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chennai Reservoir Water Levels (Day-wise)</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <link rel="stylesheet" href="/Users/surajj/Desktop/HydraNET/chennai_style.css"/>
+</head>
+<body>
+    <h2 class="text-header">Chennai Reservoir Water Levels</h2>
+    <div id="controls">
+        <label for="datePicker">Select Date: </label>
+        <input type="date" id="datePicker" min="2004-01-01" max="2025-03-12">
+        <br>
+        <p>Lake Storage As On</p>
+        <span id="dateDisplay"></span>
+    </div>
+    <div id="map"></div>
+</body>
+
+<script src="/Users/surajj/Desktop/HydraNET/chennai.js"></script>
+</html>

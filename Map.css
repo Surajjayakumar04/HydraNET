@@ -1,0 +1,70 @@
+#map 
+{
+    height: 600px;
+    width: 100%;
+}
+
+.heading 
+{
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 20px 0;
+}
+
+#controls {
+    text-align: center; /* Center the controls */
+    margin-bottom: 15px; /* Space below the buttons */
+}
+
+/* Style for buttons */
+button {
+    border: none; /* Remove border */
+    color: rgb(0, 0, 0); /* Black text */
+    padding: 10px 10px; /* Padding */
+    text-align: center; /* Center text */
+    font-size: 13px; /* Font size */
+    margin: 4px 2px; /* Margin between buttons */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 15px; /* Rounded corners */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+}
+
+/* Specific button styles for hover effects */
+button:hover {
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+    color: #ffffff;
+}
+
+/* Individual button colors */
+#filter-green {
+    background-color: #8fca91cb; /* Green */
+}
+
+#filter-yellow {
+    background-color: #fad400c6; /* Yellow */
+}
+
+#filter-red {
+    background-color: #ee756cc7; /* Red */
+}
+
+#filter-all {
+    background-color: #84d5f0cf; /* Blue */
+}
+
+/* Hover effects for specific buttons */
+#filter-yellow:hover {
+    background-color: #ffc400; /* darker yellow on hover */
+}
+
+#filter-red:hover {
+    background-color: #fe0000; /* darker red on hover */
+}
+
+#filter-green:hover {
+    background-color: #3aa940; /* Darker green on hover */
+}
+
+#filter-all:hover {
+    background-color: #04c9ff; /* Darker blue on hover */
+}
